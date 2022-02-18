@@ -1,7 +1,7 @@
 version: "3.6"
 services:
   portainer:
-    image: portainer/portainer
+    image: portainer/portainer-ce
     container_name: portainer
     restart: always
     command: -H unix:///var/run/docker.sock
@@ -17,7 +17,7 @@ services:
   organizr:
     container_name: organizr
     restart: always
-    image: lsiocommunity/organizr
+    image: organizr/organizr
     volumes:
       - ${USERDIR}/docker/organizr:/config
       - ${USERDIR}/docker/shared:/shared
